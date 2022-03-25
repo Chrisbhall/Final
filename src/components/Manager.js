@@ -3,11 +3,12 @@ import NAV from './manager_comp/nav';
 import Buildings from './manager_comp/Buildings';
 import Tenants from './manager_comp/tenant';
 
-export default function Manager() {
+export default function Manager(props) {
   const [page, setPage] = useState("Buildings");
+  console.log(props);
 return (<div>
 <NAV page={page} setPage={setPage}/>
-{page === "Buildings" && <Buildings/>}
-{page === "Tenants" && <Tenants/>}
+{page === "Buildings" && <Buildings buildings={props.state.buildings}/>}
+{page === "Tenants" && <Tenants tenants={props.users}/>}
 </div>);
 }
