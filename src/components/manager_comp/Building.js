@@ -1,12 +1,13 @@
 import React from "react";
+import "./building.scss";
 
 
 export default function Building(props) {
-  console.log(props);
+ // console.log(props);
 return (
-  <article>
+  <article className="building">
     <h2>{props.address}</h2>
-    <img src={props.photo}/>
+    <img className="article_image" src={props.photo}/>
     <p>{props.description}</p>
   </article>
 );

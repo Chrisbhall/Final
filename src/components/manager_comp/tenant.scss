@@ -1,0 +1,37 @@
+article.tenant{
+  height:100px;
+  width:80%;
+  border-color:gray;
+  border-style: solid;
+  margin:5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.button_image_danger{
+  width:75px;
+  height:75px;
+}
+.button_image_danger:hover{
+  width:75px;
+  height:75px;
+  cursor:pointer;
+  background-color:white;
+  border-style:solid;
+  border-color:red;
+}
+.button_image_edit{
+  width:75px;
+  height:75px;
+}
+.button_image_edit:hover{
+  width:75px;
+  height:75px;
+  cursor:pointer;
+  background-color:white;
+  border-style:solid;
+  border-color:blue;
+}
