@@ -16,12 +16,12 @@ return (
  className="button_image_edit"
             src="images/edit.png"
             alt="Edit"
-            onClick={props.onEdit}
+            onClick={() => props.onEdit(props.id)}
           /></div><div className="buttons"><img
           className="button_image_danger"
           src="images/trash.png"
           alt="Delete"
-          onClick={props.onDelete}
+          onClick={() => props.onDelete(props.id)}
         /></div>
 </article>
 );

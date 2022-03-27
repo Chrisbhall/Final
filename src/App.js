@@ -7,7 +7,7 @@ import useApplicationData from "./hooks/useApplicationData";
 
 function App() {
   const [state, setState] = useState({
-    users:[  {
+    users:[{
       "id": 1,
       "name": "Alice Boa",
       "phone": "9053341213",
@@ -87,7 +87,7 @@ function App() {
       
     });
 },[])*/
-return (<Manager state={state}></Manager>);
+return (<Manager state={state} setState={setState}></Manager>);
 
 }
 
