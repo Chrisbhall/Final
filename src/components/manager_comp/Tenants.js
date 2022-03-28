@@ -25,6 +25,7 @@ export default function Tenants(props) {
     id: "",
     name: "",
     email: "",
+    password:"",
     phone: ""
   });
   function onSave(id,name,phone,email) {
@@ -43,14 +44,14 @@ export default function Tenants(props) {
   }
 
   function onDelete(id){
-    id=id-1;
+    id -= 1;
     setDeleteId(id);
     setTenant({name: props.tenants[id].name, email: props.tenants[id].email, phone: props.tenants[id].phone});
     transition(CONFIRM);
   }
   function onEdit(id){
     id -=1;
-    setTenant({id: props.tenants[id].id, name: props.tenants[id].name, email: props.tenants[id].email, phone: props.tenants[id].phone});
+    setTenant({id: props.tenants[id].id, name: props.tenants[id].name, email: props.tenants[id].email, password: props.tenants[id].password, phone: props.tenants[id].phone});
     console.log(tenant);
     transition(EDIT);
   }
@@ -63,6 +64,7 @@ export default function Tenants(props) {
   function onConfirm(){
 
     transition(DELETE, true);
+    
     /*props.cancelInterview(deleteId).then(() => transition(EMPTY, true)).catch(() => transition(ERROR_DELETE, true));*/
   }
   console.log(props);
@@ -74,7 +76,7 @@ return (
   <h2><button onClick={() => onCreate()}>Create Tenant!</button></h2>
   {mode === SHOW && map1}
   {mode === CREATE && <Form onCancel={onCancel} onSave={onSave}/>}
-  {mode === EDIT && <Form id={tenant.id} name={tenant.name} email={tenant.email} phone={tenant.phone} onCancel={onCancel} onSave={onSave}/>}
+  {mode === EDIT && <Form id={tenant.id} name={tenant.name} email={tenant.email} password={tenant.password} phone={tenant.phone} onCancel={onCancel} onSave={onSave}/>}
   {mode === CONFIRM && <Confirm name={tenant.name} onConfirm={onConfirm} onCancel={onCancel}/>}
   {mode === DELETE && <Status message="Deleting..." />}
   {mode === SAVE && <Status message="Saving..." />}
