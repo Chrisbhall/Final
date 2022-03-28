@@ -41,6 +41,7 @@ export default function Tenants(props) {
     //props.setState(...props.tenants, props.state.users[id])
     /*  props.bookInterview(props.id,interview).then(() => transition(SHOW, true)).catch(() => transition(ERROR_SAVE, true));*/
     console.log(props.tenants);
+    transition(SHOW);
   }
 
   function onDelete(id){
@@ -57,6 +58,7 @@ export default function Tenants(props) {
   }
   function onCreate(){
     transition(CREATE);
+    
   }
   function onCancel(){
     back();
@@ -64,7 +66,7 @@ export default function Tenants(props) {
   function onConfirm(){
 
     transition(DELETE, true);
-    
+
     /*props.cancelInterview(deleteId).then(() => transition(EMPTY, true)).catch(() => transition(ERROR_DELETE, true));*/
   }
   console.log(props);
