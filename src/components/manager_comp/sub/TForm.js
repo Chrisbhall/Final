@@ -30,8 +30,8 @@ return (
     <input type="text" name="name" value={name} placeholder="firstName lastName " required onChange={(event) => setName(event.target.value)}/><br/>
     <label htmlFor="name">Email:</label><br/>
     <input type="email" name="email" required placeholder="name@address.com" value={email} onChange={(event) => setEmail(event.target.value)}/><br/>
-    <lebel htmlFor="password">Password:</lebel><br />
-    <input type="password" name="password" required value={password} minlength="8" onChange={(event) => setPassword(event.target.value)} /><br/>
+    <label htmlFor="password">Password:</label><br />
+    <input type="password" name="password" required value={password} minLength="8" onChange={(event) => setPassword(event.target.value)} /><br/>
     <label htmlFor="name">Phone:</label><br/>
     <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="123-456-7890" name="phone" value={phone} onChange={(event) => setPhone(event.target.value)}/><br/>
     <button onClick={() => validate()}>Save</button>

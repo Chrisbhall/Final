@@ -75,7 +75,7 @@ export default function Tenants(props) {
   });
 return (
 <section>
-  <h2><button onClick={() => onCreate()}>Create Tenant!</button></h2>
+  <div className="title"><h1>{props.page}</h1><button onClick={() => onCreate()}>Create Tenant!</button></div>
   {mode === SHOW && map1}
   {mode === CREATE && <Form onCancel={onCancel} onSave={onSave}/>}
   {mode === EDIT && <Form id={tenant.id} name={tenant.name} email={tenant.email} password={tenant.password} phone={tenant.phone} onCancel={onCancel} onSave={onSave}/>}
