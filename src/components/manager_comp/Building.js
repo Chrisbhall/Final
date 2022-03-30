@@ -5,7 +5,7 @@ import "./building.scss";
 export default function Building(props) {
  // console.log(props);
 return (
-  <article className="building">
+  <article className="building"  onClick={() => props.onDetails(props.id)}>
     <h2>{props.address}</h2>
     <div className="buttons"><img
  className="button_image_edit"

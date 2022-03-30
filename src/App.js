@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import Manager from './components/Manager';
+import Login from "./components/Login";
 import axios from "axios";
 import useApplicationData from "./hooks/useApplicationData";
 
@@ -87,8 +88,8 @@ function App() {
       
     });
 },[])*/
-return (<Manager state={state} setState={setState}></Manager>);
+return (<Login/>);
 
 }
-
+//<Manager state={state} setState={setState}></Manager>
 export default App;
