@@ -7,6 +7,9 @@ import axios from "axios";
 import useApplicationData from "./hooks/useApplicationData";
 
 function App() {
+  function onLogin(email, password){
+    console.log(email, password);
+  }
   const [state, setState] = useState({
     users:[{
       "id": 1,
@@ -88,8 +91,10 @@ function App() {
       
     });
 },[])*/
-return (<Login/>);
+return (<Login login={onLogin}/>);
 
 }
+//
+//
 //<Manager state={state} setState={setState}></Manager>
 export default App;
