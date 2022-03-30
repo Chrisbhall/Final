@@ -1,0 +1,31 @@
+nav{
+  height:125px;
+  background-color:gray;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.left_nav{
+  display:flex;
+  width:250px;
+}
+div.right_nav{
+  display:flex;
+  height:125px;
+}
+.logo{
+  width:150px;
+  height:125px;
+}
+.nav_button{
+  font-size: large;
+cursor:pointer;
+margin-top:0;
+border:0;
+background-color: gray;
+color:white;
+}
+.nav_button:hover{
+  background-color: lightgray;
+  color:black;
+  }

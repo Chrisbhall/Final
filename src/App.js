@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from "react";
 import Manager from './components/Manager';
+import Tenant from './components/Tenant';
 import Login from "./components/Login";
 import axios from "axios";
 import useApplicationData from "./hooks/useApplicationData";
@@ -91,10 +92,10 @@ function App() {
       
     });
 },[])*/
-return (<Login login={onLogin}/>);
+return (<Tenant buildings={state.buildings} id={state.users[2].id} name={state.users[2].name}/>);
 
 }
-//
+//<Login login={onLogin}/>
 //
 //<Manager state={state} setState={setState}></Manager>
 export default App;
